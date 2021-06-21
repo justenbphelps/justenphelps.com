@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from 'react'
+import Styled from 'styled-components'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// Components
+import Loader from './components/Loader'
+import Wrapper from './components/Wrapper'
+
+const AppWrapper = Styled.div`
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000000;
+  color: #fafafa;
+  position: relative;
+`
+
+const App = () => {
+    const [loading, setLoading] = useState(true) // set true for release
+
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         setLoading(false)
+    //     }, 3500)
+    // }, [])
+
+    function listener(e) {
+        if (e.code === 'Enter') {
+            setLoading(false)
+        }
+    }
+    document.addEventListener('keydown', listener)
+
+    return (
+        <AppWrapper>
+            <Loader loading={loading} />
+            {loading ? null : <Wrapper />}
+        </AppWrapper>
+    )
 }
 
-export default App;
+export default App

@@ -1,13 +1,38 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+    font-family: 'notalot35';
+    src: local('notalot35'), url(./fonts/notalot35.ttf) format('ttf');
+}
+@font-face {
+    font-family: 'zig';
+    src: local('zig'), url(./fonts/zig.ttf) format('ttf');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'zig';
+    font-size: 12px;
+    margin: 0;
+    color: #333333;
+}
+
+.loader {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    /* transition: display 1s; */
+}
+
+.invisible {
+    /* opacity: 0; */
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 500px) {
+    .topBar-text {
+        font-size: 10px !important;
+    }
 }
