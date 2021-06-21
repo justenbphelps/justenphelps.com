@@ -16,18 +16,13 @@ const AppWrapper = Styled.div`
 const App = () => {
     const [loading, setLoading] = useState(true) // set true for release
 
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         setLoading(false)
-    //     }, 3500)
-    // }, [])
-
     function listener(e) {
-        if (e.code === 'Enter') {
+        if (e.code === 'Enter' || e.type === 'touchstart') {
             setLoading(false)
         }
     }
     document.addEventListener('keydown', listener)
+    document.addEventListener('touchstart', listener)
 
     return (
         <AppWrapper>

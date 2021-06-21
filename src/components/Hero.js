@@ -12,6 +12,7 @@ const HeroWrapper = Styled.div`
 const HeroTextContent = Styled.div`
     /* border: 1px solid red; */
     max-width: 400px;
+    height: 100%;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -37,7 +38,7 @@ const Hero = () => {
                             .pauseFor(500)
                             .typeString(intro)
                             .pauseFor(500)
-                            .typeString('<p>Main Stack: </p>')
+                            .typeString('<p>Familar Technologies: </p>')
                             .pauseFor(1000)
                             .typeString('<p>- JavaScript/TypeScript</p>')
                             .pauseFor(1000)

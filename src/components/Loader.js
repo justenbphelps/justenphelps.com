@@ -13,6 +13,7 @@ const LoaderWrapper = Styled.div`
 const Sprite = Styled.img`
     margin-bottom: 40px;
 `
+const windowWidth = window.innerWidth
 
 const Loader = (props) => {
     return (
@@ -27,7 +28,11 @@ const Loader = (props) => {
                 }}
                 onInit={(typewriter) => {
                     typewriter
-                        .typeString('Press enter to continue')
+                        .typeString(
+                            windowWidth > 500
+                                ? 'Press Enter to continue'
+                                : 'Touch to continue'
+                        )
                         .pauseFor(2500)
                         .start()
                 }}
