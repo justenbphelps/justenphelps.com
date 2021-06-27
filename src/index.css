@@ -1,3 +1,4 @@
+@import '~antd/dist/antd.css';
 @font-face {
     font-family: 'notalot35';
     src: local('notalot35'), url(./fonts/notalot35.ttf) format('ttf');
@@ -5,6 +6,16 @@
 @font-face {
     font-family: 'zig';
     src: local('zig'), url(./fonts/zig.ttf) format('ttf');
+}
+@font-face {
+    font-family: 'monsterFriendBack';
+    src: local('monsterFriendBack'),
+        url(./fonts/MonsterFriendBack.otf) format('otf');
+}
+@font-face {
+    font-family: 'monsterFriendFore';
+    src: local('monsterFriendFore'),
+        url(./fonts/MonsterFriendFore.otf) format('otf');
 }
 
 html,

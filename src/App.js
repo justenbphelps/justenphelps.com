@@ -3,7 +3,7 @@ import Styled from 'styled-components'
 
 // Components
 import Loader from './components/Loader'
-import Wrapper from './components/Wrapper'
+import Sim from './components/Sim'
 
 const AppWrapper = Styled.div`
   width: 100%;
@@ -27,7 +27,7 @@ const App = () => {
     return (
         <AppWrapper>
             <Loader loading={loading} />
-            {loading ? null : <Wrapper />}
+            {loading ? null : <Sim />}
         </AppWrapper>
     )
 }
