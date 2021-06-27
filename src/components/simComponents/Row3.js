@@ -128,7 +128,7 @@ export default function Row3(props) {
                 onCancel={handleCancel}
                 width={window.innerWidth > 600 ? '600px' : window.innerWidth}
             >
-                <Document file="/docs/resume.pdf">
+                <Document file="https://justen-main.s3.us-west-1.amazonaws.com/Resume+June+2021.pdf">
                     <Page
                         pageNumber={1}
                         width={
@@ -142,7 +142,7 @@ export default function Row3(props) {
             {move === 'resume' ? (
                 <Announcement>
                     <div>
-                        You downloaded{' '}
+                        You viewed{' '}
                         <span
                             style={{
                                 color: '#b98eff',
